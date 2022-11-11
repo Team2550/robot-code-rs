@@ -4,9 +4,9 @@
 # <https://www.gnu.org/licenses/> for a copy.
 
 [build]
-target = "armv7-unknown-linux-gnueabihf"
+target = "arm-unknown-linux-gnueabi"
 
-[target.armv7-unknown-linux-gnueabihf]
+[target.arm-unknown-linux-gnueabi]
 rustflags = [
   "-C", "target-cpu=cortex-a9",
 ]
