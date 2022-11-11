@@ -7,7 +7,6 @@
 target = "armv7-unknown-linux-gnueabihf"
 
 [target.armv7-unknown-linux-gnueabihf]
-linker="armv7-unknown-linux-gnueabihf-gcc"
 rustflags = [
   "-C", "target-cpu=cortex-a9",
 ]
