@@ -1,11 +1,21 @@
-use wpilib::*;
+use wpilib::{ds::Alliance, *};
 
 fn main() {
-    let robot = RobotBase::new().expect("HAL FAILED");
-
-    // Do some setup
-
+    // MARK: Setup
     RobotBase::start_competition();
+    let robot = RobotBase::new().expect("HAL FAILED");
+    let ds = robot.make_ds();
 
-    // In-match code
+    // MARK: Match code
+
+    // Some sample boilerplate:
+    let alliance = ds.alliance().unwrap();
+    match alliance {
+        Alliance::Red => {
+            println!("Red Alliance")
+        }
+        Alliance::Blue => {
+            println!("Blue Alliance")
+        }
+    }
 }
