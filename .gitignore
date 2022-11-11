@@ -1,1 +1,2 @@
-target/ # ignore the build dir
+# Ignore the build dir
+target/
