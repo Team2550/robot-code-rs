@@ -1,0 +1,13 @@
+[package]
+name = "skynet_code"
+version = "0.1.0"
+authors = ["Garin Hamburg", "Charlie Welsh"]
+edition = "2018" # rust edition, not FRC year
+
+[dependencies]
+wpilib = "0.4.0"
+
+[package.metadata.frc]
+team-number = 2550
+target-dir = "target"
+executable-name = "skynet_code"
