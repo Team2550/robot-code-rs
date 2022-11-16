@@ -1,4 +1,8 @@
+// crates
 use wpilib::{ds::Alliance, *};
+
+// our files
+mod input;
 
 fn main() {
     // MARK: Setup
@@ -19,3 +23,4 @@ fn main() {
         }
     }
 }
+
