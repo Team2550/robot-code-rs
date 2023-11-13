@@ -3,19 +3,25 @@ use wpilib::ds::{*};
 trait Input {
   // Functions we need to implement for a given input mechanism.
 
-  fn boost(&self) -> bool; //Go fast
+  fn a(&self) -> bool; 
 
-  fn turtle(&self) -> bool; //Go slow
+  fn b(&self) -> bool; 
   
-  fn intake(&self) -> bool;
+  fn x(&self) -> bool;
 
-  fn extend(&self) -> bool; //Extend pison
+  fn y(&self) -> bool;
 
-  fn retract(&self) -> bool; //Retract piston
+  fn lb(&self) -> bool; 
+
+  fn rb(&self) -> bool; 
   
-  fn lefttankaxis(&self) -> f32;
+  fn leftx(&self) -> f32;
   
-  fn righttankaxis(&self) -> f32;
+  fn lefty(&self) -> f32;
+
+  fn rightx(&self) -> f32;
+  
+  fn righty(&self) -> f32;
 
   const A: u8 = 1;
   const B: u8 = 2;
@@ -55,23 +61,27 @@ impl XboxController<'_> {
 
 impl Input for XboxController<'_> {
 
-fn boost(&self) -> bool {
-    self.raw_button(Self::B)
-  }
-
-  fn turtle(&self) -> bool {
+  fn a(&self) -> bool {
     self.raw_button(Self::A)
   }
 
-  fn intake(&self) -> bool {
+  fn b(&self) -> bool {
+    self.raw_button(Self::B)
+  }
+
+  fn x(&self) -> bool {
     self.raw_button(Self::X)
   }
 
-  fn extend(&self) -> bool {
+  fn y(&self) -> bool {
+    self.raw_button(Self::Y)
+  }
+
+  fn lb(&self) -> bool {
     self.raw_button(Self::LB)
   }
 
-  fn retract(&self) -> bool {
+  fn rb(&self) -> bool {
     self.raw_button(Self::RB)
   }
 
